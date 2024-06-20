@@ -1,11 +1,8 @@
 '''
-Alper Tanrıkulu, Gülnur Uzun
-
-Q2:
-(30 points) Missense Mutation Function
+Missense Mutation Function
 '''
 
-from groupNo26_HW2_Q1 import RNA_CDC, aa_dict
+from create_ribosome_function import RNA_CDC, aa_dict
 
 def Mutation(seq:str, mutation:str, codons:dict = aa_dict): #obligatory parameters were defined along with the requested data types
     nucleotides = ["a", "c", "g", "u"]
@@ -35,9 +32,6 @@ def Mutation(seq:str, mutation:str, codons:dict = aa_dict): #obligatory paramete
         if mutated[i:i+3] != not_mutated[i:i+3]: #if different amino acids are seen in the same position, that is, if there is a missense mutation;
             return f"p.{not_mutated[i:i+3]}{int(i/4)+1}{mutated[i:i+3]}" #returning mutation information in the desired format
     return f"The mutation is not missense mutation!"
-
-
-
 #---------------------------------------------------------------------------------------------------------------------------------------
 # You can control the parameters here.
 mutat1 = "r.69A>C"
@@ -45,6 +39,3 @@ fasta_seq = open("seq.txt", "r")
 seq = fasta_seq.read()
 
 print(Mutation(seq, mutat1))
-
-
-
