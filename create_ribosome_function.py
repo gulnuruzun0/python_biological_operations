@@ -1,8 +1,5 @@
 '''
-Alper Tanrıkulu, Gülnur Uzun
-
-Q1: 
-(30 points) Ribosome Function
+Ribosome Function with aminoacid dictionary
 '''
 
 aa = open("codon-aa-list.txt", "r")
