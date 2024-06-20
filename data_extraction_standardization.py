@@ -1,8 +1,5 @@
 '''
-Alper Tanrıkulu, Gülnur Uzun
-
-Q3:
-(40 points) Data Extraction and Standardization
+Data Extraction and Standardization
 '''
 
 import numpy as np
@@ -23,7 +20,6 @@ def calculatorZ(exp_list):
         for i in range(len(exp_list)):
             x = (exp_list[i] - np.mean(exp_list)) / np.std(exp_list)
         return z
-
 
 # I use "with" term to close the file automatically. It is a proper way of file processing.
 with open("gene_expression.txt", "r") as file: 
